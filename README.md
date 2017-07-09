@@ -1,5 +1,7 @@
 # ink-progress-bar
 
+[![Build Status](https://travis-ci.org/brigand/ink-progress-bar.svg?branch=master)](https://travis-ci.org/brigand/ink-progress-bar)
+
 > Progress bar component for [Ink](https://github.com/vadimdemedes/ink).
 
 

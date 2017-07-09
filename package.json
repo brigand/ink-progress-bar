@@ -6,9 +6,10 @@
   "author": "Frankie Bagnardi <f.bagnardi@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "xo && jest",
+    "test": "xo && jest --coverage",
     "build": "babel src --out-dir lib --ignore src/__tests__",
-    "prepublish": "npm run test && npm run build"
+    "prepublish": "npm run test && npm run build",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "files": [
     "lib"
@@ -23,6 +24,7 @@
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "coveralls": "^2.13.1",
     "eslint-config-xo-react": "^0.13.0",
     "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.4",
