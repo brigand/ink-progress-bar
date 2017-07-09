@@ -1,6 +1,8 @@
 /* @jsx h */
+'use strict';
+
 const {h, mount, Component, Text} = require('ink');
-const ProgressBar = require('../src/progress-bar.js');
+const ProgressBar = require('../src/progress-bar');
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -16,12 +18,14 @@ class ProgressApp extends Component {
   }
 
   render() {
-    const text = `Running `;
+    const text = 'Running ';
+
     return (
       <div>
         <Text green>
           {text}
         </Text>
+
         <ProgressBar
           blue
           left={text.length}
@@ -32,17 +36,18 @@ class ProgressApp extends Component {
   }
 
   componentDidMount() {
-    const promises = Array.from({length: TASKS}, () =>
-      delay(Math.floor(Math.random() * 1500))
-      .then(() => {
-        this.setState(state => ({done: state.done + 1}));
-      })
-    );
+    const promises = Array.from({length: TASKS}, () => {
+      return delay(Math.floor(Math.random() * 1500))
+        .then(() => {
+          this.setState(state => ({
+            done: state.done + 1
+          }));
+        });
+    });
 
     Promise.all(promises)
       .then(() => delay(50))
-    // eslint-disable-next-line unicorn/no-process-exit
-      .then(() => process.exit(0));
+      .then(() => process.exit(0)); // eslint-disable-line unicorn/no-process-exit
   }
 }
 

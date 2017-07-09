@@ -1,17 +1,20 @@
-# ProgressBar
+# ink-progress-bar
 
-The ProgressBar component represents progress. See examples/progress.js for an example app. Run it with `./examples/run progress`
+> Progress bar component for [Ink](https://github.com/vadimdemedes/ink).
+
 
 ## Install
 
 ```sh
-npm install --save ink-progress-bar
+$ npm install --save ink-progress-bar
 ```
 
 ## Usage
 
-```js
-const {h, Text} = require('ink');
+See [examples/basic.js](examples/basic.js) for an example app. Run it with `./examples/run basic`.
+
+```jsx
+const {h} = require('ink');
 const ProgressBar = require('ink-progrss-bar');
 
 <ProgressBar
@@ -25,25 +28,31 @@ const ProgressBar = require('ink-progrss-bar');
 
 ## Props
 
-### character
+All props except the ones below are passed to `<Text>` as-is.
 
-The character to use for each item in the ProgressBar. Defaults to █ (block).
+### char
+
+Type: `string`<br>
+Default: `'█'`
+
+The character to use for each step.
 
 ### progress
 
-The percentage (between 0 and 1) of progress in the ProgressBar.
+Type: `number`<br>
+Default: `0`
 
-### left/right
+The percentage (between 0 and 1) of progress.
 
-The number of characters to subtract from each side of the ProgressBar. examples/progress.js demonstrates this. Commonly used if you want text before/after the progress bar on the same line.
+### left
+### right
 
+Type: `number`<br>
+Default: `0`
 
-### {color}
-
-Pass any chalk colors (e.g. `green`, `bgBlue`), similar to Text.
-
-### ...
-
-Any other props are passed to Text as-is.
+The number of characters to subtract from each side of the progress bar. Commonly used if you want text before/after the progress bar on the same line. See [examples/basic.js](examples/basic.js) for an example.
 
 
+## License
+
+MIT © [Frankie Bagnardi](https://github.com/brigand)
