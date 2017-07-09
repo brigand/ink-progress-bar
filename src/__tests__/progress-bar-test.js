@@ -1,10 +1,10 @@
-const ProgressBar = require('../src/progress-bar.js');
+const ProgressBar = require('../progress-bar.js');
 
 const run = (columns, left, right) => ProgressBar.prototype.getString.call({
   props: {columns, left, right, char: 'x'}
 });
 
-it(`has correct length`, t => {
+it(`has correct length`, () => {
   const str = run(50, 0, 0);
   expect(str.length).toBe(50);
 
