@@ -12,15 +12,7 @@
   },
   "babel": {
     "presets": [
-      "babel-preset-react",
-      [
-        "env",
-        {
-          "target": {
-            "node": "6"
-          }
-        }
-      ]
+      "babel-preset-react"
     ],
     "plugins": [
       [
