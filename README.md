@@ -1,6 +1,6 @@
 # ink-progress-bar
 
-[![Build Status](https://travis-ci.org/brigand/ink-progress-bar.svg?branch=master)](https://travis-ci.org/brigand/ink-progress-bar) | [![Coverage Status](https://coveralls.io/repos/github/brigand/ink/badge.svg?branch=master)](https://coveralls.io/github/brigand/ink?branch=master)
+[![Build Status](https://travis-ci.org/brigand/ink-progress-bar.svg?branch=master)](https://travis-ci.org/brigand/ink-progress-bar)
 
 > Progress bar component for [Ink](https://github.com/vadimdemedes/ink).
 
