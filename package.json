@@ -1,0 +1,45 @@
+{
+  "name": "ink-progress-bar",
+  "version": "1.0.0",
+  "description": "a customizable progress bar for ink",
+  "main": "lib/index.js",
+  "author": "Frankie Bagnardi <f.bagnardi@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "build": "babel src --out-dir lib --ignore src/__tests__"
+  },
+  "babel": {
+    "presets": [
+      "babel-preset-react",
+      [
+        "env",
+        {
+          "target": {
+            "node": "4"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "transform-react-jsx",
+        {
+          "pragma": "h"
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "jest": "^20.0.4"
+  },
+  "dependencies": {
+    "blacklist": "^1.1.4",
+    "ink": "^0.1.1"
+  }
+}
