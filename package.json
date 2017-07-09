@@ -6,9 +6,27 @@
   "author": "Frankie Bagnardi <f.bagnardi@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "test": "xo && jest",
     "build": "babel src --out-dir lib --ignore src/__tests__",
     "prepublish": "npm run test && npm run build"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "blacklist": "^1.1.4",
+    "ink": "^0.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint-config-xo-react": "^0.13.0",
+    "eslint-plugin-react": "^7.1.0",
+    "jest": "^20.0.4",
+    "xo": "^0.18.2"
   },
   "babel": {
     "presets": [
@@ -18,21 +36,28 @@
       [
         "transform-react-jsx",
         {
-          "pragma": "h"
+          "pragma": "h",
+          "useBuiltIns": true
         }
       ]
     ]
   },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-react": "^6.24.1",
-    "jest": "^20.0.4"
-  },
-  "dependencies": {
-    "blacklist": "^1.1.4",
-    "ink": "^0.1.1"
+  "xo": {
+    "space": true,
+    "env": "jest",
+    "extends": [
+      "xo-react"
+    ],
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "react/prop-types": 0
+    },
+    "settings": {
+      "react": {
+        "pragma": "h"
+      }
+    }
   }
 }
