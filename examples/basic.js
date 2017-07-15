@@ -1,7 +1,7 @@
 /* @jsx h */
 'use strict';
 
-const {h, mount, Component, Text} = require('ink');
+const {h, render, Component, Text} = require('ink');
 const ProgressBar = require('../src/progress-bar');
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -51,5 +51,4 @@ class ProgressApp extends Component {
   }
 }
 
-mount(<ProgressApp/>, process.stdout);
-
+render(<ProgressApp/>);
