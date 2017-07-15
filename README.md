@@ -8,7 +8,7 @@
 ## Install
 
 ```sh
-$ npm install --save ink-progress-bar
+$ npm install ink-progress-bar
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ See [examples/basic.js](examples/basic.js) for an example app. Run it with `./ex
 
 ```jsx
 const {h} = require('ink');
-const ProgressBar = require('ink-progrss-bar');
+const ProgressBar = require('ink-progress-bar');
 
 <ProgressBar
 	char="x"
@@ -32,7 +32,7 @@ const ProgressBar = require('ink-progrss-bar');
 
 All props except the ones below are passed to `<Text>` as-is.
 
-### char
+### character
 
 Type: `string`<br>
 Default: `'█'`

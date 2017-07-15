@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "blacklist": "^1.1.4",
-    "ink": "^0.1.2"
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -27,6 +27,7 @@
     "coveralls": "^2.13.1",
     "eslint-config-xo-react": "^0.13.0",
     "eslint-plugin-react": "^7.1.0",
+    "ink": "^0.2.1",
     "jest": "^20.0.4",
     "xo": "^0.18.2"
   },
@@ -53,9 +54,6 @@
     "plugins": [
       "react"
     ],
-    "rules": {
-      "react/prop-types": 0
-    },
     "settings": {
       "react": {
         "pragma": "h"
