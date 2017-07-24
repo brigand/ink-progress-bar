@@ -21,7 +21,7 @@ const ProgressBar = require('ink-progress-bar');
 
 <ProgressBar
 	char="x"
-	progress={0.5}
+	percent={0.5}
 	left={5}
 	right={0}
 	green
@@ -39,7 +39,7 @@ Default: `'█'`
 
 The character to use for each step.
 
-### progress
+### percent
 
 Type: `number`<br>
 Default: `0`
