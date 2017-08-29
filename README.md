@@ -20,7 +20,7 @@ const {h} = require('ink');
 const ProgressBar = require('ink-progress-bar');
 
 <ProgressBar
-	char="x"
+	character="x"
 	percent={0.5}
 	left={5}
 	right={0}
