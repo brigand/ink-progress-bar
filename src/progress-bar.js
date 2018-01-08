@@ -4,17 +4,22 @@ const PropTypes = require('prop-types');
 const blacklist = require('blacklist');
 const {Component, h, Text} = require('ink');
 
-const PROPS = ['percent', 'left', 'right', 'columns', 'character'];
+const PROPS = ['percent', 'left', 'right', 'columns', 'character', 'rightPad'];
 
 class Bar extends Component {
   getString() {
-    const {percent, columns, left, right, character} = this.props;
+    const {percent, columns, left, right, character, rightPad} = this.props;
 
     const screen = columns || process.stdout.columns || 80;
     const space = screen - right - left;
     const max = Math.min(Math.floor(space * percent), space);
+    const chars = character.repeat(max);
 
-    return character.repeat(max);
+    if (!rightPad) {
+      return chars;
+    }
+
+    return chars + ' '.repeat(space - max);
   }
 
   render() {
@@ -28,7 +33,8 @@ Bar.defaultProps = {
   percent: 1,
   left: 0,
   right: 0,
-  character: '█'
+  character: '█',
+  rightPad: false
 };
 
 Bar.propTypes = {
@@ -36,7 +42,8 @@ Bar.propTypes = {
   percent: PropTypes.number,
   left: PropTypes.number,
   right: PropTypes.number,
-  character: PropTypes.string
+  character: PropTypes.string,
+  rightPad: PropTypes.boolean
 };
 
 module.exports = Bar;

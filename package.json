@@ -6,7 +6,7 @@
   "author": "Frankie Bagnardi <f.bagnardi@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "xo && jest --coverage",
+    "test": "xo --fix && jest --coverage",
     "build": "babel src --out-dir lib --ignore src/__tests__",
     "prepublish": "npm run test && npm run build",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
