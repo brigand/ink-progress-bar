@@ -43,7 +43,7 @@ Bar.propTypes = {
   left: PropTypes.number,
   right: PropTypes.number,
   character: PropTypes.string,
-  rightPad: PropTypes.boolean
+  rightPad: PropTypes.bool
 };
 
 module.exports = Bar;
