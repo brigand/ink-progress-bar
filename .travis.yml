@@ -1,6 +1,19 @@
 language: node_js
 node_js:
-  - "6"
+  - 10
+  - 8
+
+cache:
+  directories:
+    - node_modules/
+
+install:
+  - yarn
+
 script:
-  - npm run test
-  - npm run build
+  - yarn test
+  - yarn run build
+
+# Uncomment these lines if you want to enable code coverage
+# after_script:
+#   - cat coverage/lcov.info | coveralls

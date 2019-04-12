@@ -16,16 +16,24 @@ $ npm install ink-progress-bar
 See [examples/basic.js](examples/basic.js) for an example app. Run it with `./examples/run basic`.
 
 ```jsx
-const {h} = require('ink');
-const ProgressBar = require('ink-progress-bar');
+import React, { Component } from 'react';
+import { Color } from 'ink';
+import ProgressBar from 'ink-progress-bar';
 
-<ProgressBar
-	character="x"
-	percent={0.5}
-	left={5}
-	right={0}
-	green
-/>
+class MyProgress extends Component {
+	render() {
+		return (
+			<>
+				<Color red>
+				<ProgressBar
+					left={text.length}
+					percent={this.state.done / TASKS}
+				/>
+				</Color>
+			</>
+		);
+	}
+}
 ```
 
 ## Props
