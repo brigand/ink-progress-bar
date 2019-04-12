@@ -21,18 +21,18 @@ import { Color } from 'ink';
 import ProgressBar from 'ink-progress-bar';
 
 class MyProgress extends Component {
-	render() {
-		return (
-			<>
-				<Color red>
+  render() {
+    return (
+      <>
+        <Color red>
           <ProgressBar
             left={text.length}
             percent={this.state.done / TASKS}
           />
-				</Color>
-			</>
-		);
-	}
+        </Color>
+      </>
+    );
+  }
 }
 ```
 
