@@ -25,10 +25,10 @@ class MyProgress extends Component {
 		return (
 			<>
 				<Color red>
-				<ProgressBar
-					left={text.length}
-					percent={this.state.done / TASKS}
-				/>
+          <ProgressBar
+            left={text.length}
+            percent={this.state.done / TASKS}
+          />
 				</Color>
 			</>
 		);
