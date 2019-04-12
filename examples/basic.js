@@ -1,14 +1,12 @@
-/* @jsx h */
-'use strict';
-
-const {h, render, Component, Text} = require('ink');
-const ProgressBar = require('../src/progress-bar');
+import React from 'react';
+import {render, Text, Color} from 'ink';
+import ProgressBar from '../src';
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const TASKS = 30;
 
-class ProgressApp extends Component {
+class ProgressApp extends React.Component {
   constructor() {
     super();
 
@@ -21,17 +19,18 @@ class ProgressApp extends Component {
     const text = 'Running ';
 
     return (
-      <div>
+      <>
         <Text green>
           {text}
         </Text>
 
-        <ProgressBar
-          blue
-          left={text.length}
-          percent={this.state.done / TASKS}
-        />
-      </div>
+        <Color red>
+          <ProgressBar
+            left={text.length}
+            percent={this.state.done / TASKS}
+          />
+        </Color>
+      </>
     );
   }
 
