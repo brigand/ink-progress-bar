@@ -35,6 +35,10 @@
     "react": "^16.8.6",
     "xo": "^0.24.0"
   },
+  "peerDependencies": {
+    "ink": ">=2.0.0",
+    "react": ">=16.8.0"
+  },
   "babel": {
     "plugins": [
       "@babel/plugin-proposal-class-properties"
